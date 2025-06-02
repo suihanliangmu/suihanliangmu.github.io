@@ -7,8 +7,11 @@
 		<meta name="keywords" content="班否,微信小程序,上班,摸鱼,倒计时,占卜,小游戏">
 		<meta name="author" content="班否团队">
 		<title>班否 - 上班摸鱼，下班快乐</title>
-		<link rel="icon"
-			href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🏢</text></svg>">
+		<!-- 网站图标 -->
+		<link rel="icon" href="static/favicon.ico" type="image/x-icon">
+		<link rel="icon" type="image/png" href="static/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="static/favicon-16x16.png" sizes="16x16">
+		<link rel="apple-touch-icon" href="static/apple-touch-icon.png" sizes="180x180">
 
 		<style>
 			:root {
@@ -95,6 +98,7 @@
 				justify-content: center;
 				color: white;
 				font-size: 1.2rem;
+				object-fit: contain; /* 确保图片比例正确 */
 			}
 
 			/* 主页面布局 */
@@ -473,6 +477,10 @@
 				justify-content: center;
 				color: var(--text-light);
 				font-size: 0.9rem;
+				object-fit: contain; /* 确保图片比例正确 */
+				background: white; /* 为透明图片添加背景 */
+				padding: 10px; /* 为图片添加内边距 */
+				box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* 添加轻微阴影 */
 			}
 
 			.copy-button {
@@ -594,7 +602,7 @@
 		<nav class="navbar" id="navbar">
 			<div class="nav-container">
 				<div class="logo">
-					<div class="logo-icon">🏢</div>
+					<img class="logo-icon" src="static/LOGO.png" alt="班否logo">
 					<span>班否</span>
 				</div>
 			</div>
@@ -617,19 +625,19 @@
 				<h2 class="section-title fade-in">核心功能</h2>
 				<div class="features-grid">
 					<div class="feature-card fade-in">
-						<div class="feature-icon">📅</div>
+						<div class="feature-icon">📋</div>
 						<h3>日常一览</h3>
 						<p>每日占卜预测运势，下班倒计时让你充满期待，收入实时计算让你更有动力</p>
 					</div>
 					<div class="feature-card fade-in">
-						<div class="feature-icon">🎮</div>
-						<h3>休闲娱乐</h3>
-						<p>精选小游戏打发无聊时光，热点资讯让你紧跟时代步伐</p>
+						<div class="feature-icon">📊️</div>
+						<h3>奇趣工坊</h3>
+						<p>饮水记录守护健康，美食选择解决选择困难症</p>
 					</div>
 					<div class="feature-card fade-in">
-						<div class="feature-icon">🛠️</div>
-						<h3>实用工具</h3>
-						<p>饮水记录守护健康，美食选择解决选择困难症</p>
+						<div class="feature-icon">🎬</div>
+						<h3>休闲赋能</h3>
+						<p>精选小游戏打发无聊时光，热点资讯让你紧跟时代步伐</p>
 					</div>
 				</div>
 			</div>
@@ -642,38 +650,45 @@
 				<div class="carousel-container">
 					<div class="carousel" id="carousel">
 						<div class="carousel-item">
-							<img src="/images/screenshot1.png" alt="主界面" loading="lazy">
+							<img src="static/1.png" alt="首页" loading="lazy">
 							<div class="carousel-caption">
 								<h3>简洁主界面</h3>
-								<p>一目了然的功能布局，轻松找到你需要的工具</p>
-							</div>
-						</div>
-						<div class="carousel-item">
-							<img src="/images/screenshot2.png" alt="每日占卜" loading="lazy">
-							<div class="carousel-caption">
-								<h3>每日占卜</h3>
 								<p>开启美好一天，预测今日运势</p>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="/images/screenshot3.png" alt="下班倒计时" loading="lazy">
+							<img src="static/2.png" alt="工坊" loading="lazy">
 							<div class="carousel-caption">
-								<h3>下班倒计时</h3>
-								<p>精确到秒的倒计时，让等待变成期待</p>
+								<h3>奇趣工坊</h3>
+								<p>解锁新的生活偷懒姿势</p>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="/images/screenshot4.png" alt="小游戏" loading="lazy">
+							<img src="static/3.png" alt="美食" loading="lazy">
 							<div class="carousel-caption">
-								<h3>休闲小游戏</h3>
-								<p>轻松有趣的游戏，缓解工作压力</p>
+								<h3>美食推荐/营养助手</h3>
+								<p>今日美食选择不在纠结，一键查询营养元素</p>
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img src="/images/screenshot5.png" alt="实用工具" loading="lazy">
+							<img src="static/4.png" alt="瓜田" loading="lazy">
 							<div class="carousel-caption">
-								<h3>实用工具集</h3>
-								<p>贴心的生活小助手，让日常更便捷</p>
+								<h3>各平台热点</h3>
+								<p>轻松了解实时热点</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="static/5.png" alt="赋能" loading="lazy">
+							<div class="carousel-caption">
+								<h3>赋能休息站</h3>
+								<p>为忙碌的你提供片刻轻松</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="static/6.png" alt="游戏" loading="lazy">
+							<div class="carousel-caption">
+								<h3>休闲娱乐</h3>
+								<p>忙里偷闲，放松一下吧</p>
 							</div>
 						</div>
 					</div>
@@ -684,6 +699,7 @@
 					<span class="carousel-dot" data-slide="2"></span>
 					<span class="carousel-dot" data-slide="3"></span>
 					<span class="carousel-dot" data-slide="4"></span>
+					<span class="carousel-dot" data-slide="5"></span>
 				</div>
 			</div>
 		</section>
@@ -718,32 +734,32 @@
 				<h2 class="section-title fade-in">联系我们</h2>
 				<div class="contact-grid">
 					<div class="contact-item fade-in">
-						<div class="qr-code">微信小程序码</div>
-						<h4>微信小程序</h4>
-						<p>搜索"班否"或扫码体验</p>
+					    <img class="qr-code" src="static/xcx.png" alt="微信小程序码">
+					    <h4>微信小程序</h4>
+					    <p>搜索"班否"或扫码体验</p>
 					</div>
 					<div class="contact-item fade-in">
-						<div class="qr-code">微信公众号码</div>
-						<h4>微信公众号</h4>
-						<p>关注获取最新资讯</p>
+					    <img class="qr-code" src="static/gzh.png" alt="微信公众号码">
+					    <h4>微信公众号</h4>
+					    <p>关注获取最新资讯</p>
 					</div>
 					<div class="contact-item fade-in">
-					    <div class="qr-code">💬</div>
+					    <img class="qr-code" src="static/QQ.png" alt="QQ联系方式">
 					    <h4>QQ联系</h4>
-					    <p>123456789</p>
-					    <button class="copy-button" onclick="copyText('123456789')">复制QQ号</button>
+					    <p>2655169308</p>
+					    <button class="copy-button" onclick="copyText('2655169308')">复制QQ号</button>
 					</div>
 					<div class="contact-item fade-in">
-						<div class="qr-code">📱</div>
-						<h4>小红书</h4>
-						<p>@班否官方</p>
-						<button class="copy-button" onclick="copyText('班否官方')">复制账号</button>
+					    <img class="qr-code" src="static/xhs.png" alt="小红书账号">
+					    <h4>小红书</h4>
+					    <p>@岁寒良木</p>
+					    <button class="copy-button" onclick="copyText('岁寒良木')">复制账号</button>
 					</div>
 					<div class="contact-item fade-in">
-						<div class="qr-code">📧</div>
-						<h4>联系邮箱</h4>
-						<p>banfou@example.com</p>
-						<button class="copy-button" onclick="copyText('banfou@example.com')">复制邮箱</button>
+					    <img class="qr-code" src="static/yx.png" alt="联系邮箱">
+					    <h4>联系邮箱</h4>
+					    <p>jan_7777777@163.com</p>
+					    <button class="copy-button" onclick="copyText('jan_7777777@163.com')">复制邮箱</button>
 					</div>
 				</div>
 			</div>
